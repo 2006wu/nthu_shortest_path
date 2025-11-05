@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/2006wu/Desktop/cool_proj/shortest_path_2026/src",
+      "program": "/Users/2006wu/Desktop/cool_proj/shortest_path_2026/src/build/Debug/outDebug"
+    }
+  ]
+}
