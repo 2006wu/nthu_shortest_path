@@ -32,8 +32,8 @@ int main(int argc, char **argv){
     }
 
     /* choose folder according to the version */
-    const char *dir_target = "/Users/2006wu/Desktop/cool_proj/shortest_path_2026/map/target";
-    const char *dir_scan   = "/Users/2006wu/Desktop/cool_proj/shortest_path_2026/map/scan";
+    const char *dir_target = "/Users/2006wu/Desktop/code-ws/shortest_path_2026/map/target";
+    const char *dir_scan   = "/Users/2006wu/Desktop/code-ws/shortest_path_2026/map/scan";
 
     const char *map_path = NULL;
     char chosen[PATH_MAX];
@@ -176,6 +176,9 @@ int main(int argc, char **argv){
                 continue;
             }
 
+            S.runlog.count = 0; // reset runlog for 1x1 exploration
+            replay_cnt = 0;  // reset replay count
+
             int old_h = S.car_h, old_w = S.car_w;
             S.car_h = 1; 
             S.car_w = 1;
@@ -188,6 +191,9 @@ int main(int argc, char **argv){
 
             printf("Exploring remaining targets with 1×1...\n");
             run_all_target_first_unvisited(&S, 1);
+
+            reset_stdin_block();
+            clearerr(stdin);
 
             S.car_h = old_h; S.car_w = old_w;
         }
@@ -203,7 +209,6 @@ int main(int argc, char **argv){
         else {
             printf("Invalid selection.\n");
         }
-        usleep(1000000);
     }
 
     return 0;

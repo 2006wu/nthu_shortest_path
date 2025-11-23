@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/2006wu/Desktop/cool_proj/shortest_path_2026/src",
-      "program": "/Users/2006wu/Desktop/cool_proj/shortest_path_2026/src/build/Debug/outDebug"
+      "cwd": "/Users/2006wu/Desktop/code-ws/shortest_path_2026/src",
+      "program": "/Users/2006wu/Desktop/code-ws/shortest_path_2026/src/build/Debug/outDebug"
     }
   ]
 }
