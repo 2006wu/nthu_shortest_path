@@ -279,7 +279,7 @@ int bfs(){
 
 int main(int argc, char **argv){
     const char *default_dir =
-        "/Users/2006wu/Desktop/cool_proj/shorteset_path_2025/map";  // 改成你的資料夾
+        "/Users/2006wu/Desktop/code-ws/shorteset_path_2025/map";  // 改成你的資料夾
     char chosen[PATH_MAX];
 
     const char *map_path = NULL;

@@ -7,7 +7,7 @@
 #include "render.h"
 
 static struct termios oldt, newt;
-#define EDIT_SAVE_DIR "/Users/2006wu/Desktop/cool_proj/shortest_path_2026/map/target"
+#define EDIT_SAVE_DIR "/Users/2006wu/Desktop/code-ws/shortest_path_2026/map/target"
 
 static void enter_raw(void){
     tcgetattr(STDIN_FILENO, &oldt);
@@ -26,7 +26,7 @@ int save_map_to_file(const State *S, const char *fname){
     char full[10000];
 
     // 你自己的路徑
-    const char *base = "/Users/2006wu/Desktop/cool_proj/shortest_path_2026/map/target";
+    const char *base = "/Users/2006wu/Desktop/code-ws/shortest_path_2026/map/target";
 
     // base + "/" + fname
     snprintf(full, sizeof(full), "%s/%s", base, fname);

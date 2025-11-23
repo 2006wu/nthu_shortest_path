@@ -71,7 +71,7 @@ int load_map_and_init(State *S, const char *map_file){
             }
         }
     }
-done_car:
+    done_car:
 
     S->path_step = 0;
     return 0;

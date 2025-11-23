@@ -534,7 +534,7 @@ int run_all_target_first_unvisited(State *S, int reply_mode){
 void replay_runlog(State *S){
     replay_cnt++;
     int old_delay = g_delay_us;
-    g_delay_us = 50000;
+    g_delay_us = old_delay / replay_cnt;
 
     for (int i = 0; i < S->runlog.count; i++) {
         S->car.x = S->runlog.steps[i].x;

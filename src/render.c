@@ -35,14 +35,14 @@ void render_map(const State *S){
                 }
             } else if (d == RIGHT) {
                 // 頭在 (cx,cy)~(cx+1,cy) 不變
-                if ((i == cx || i == cx+1) && j == cy) {
+                if (i == cx && j == cy) {
                     printf("🫥"); printed = 1;
                 } else if (i >= cx && i < cx + 2 && j <= cy && j > cy - H) {
                     // 寬固定 2，高用 H
                     printf("🛹"); printed = 1;
                 }
             } else { // LEFT
-                if ((i == cx || i == cx-1) && j == cy) {
+                if (i == cx && j == cy) {
                     printf("🫥"); printed = 1;
                 } else if (i <= cx && i > cx - 2 && j >= cy && j < cy + H) {
                     printf("🛹"); printed = 1;
@@ -60,6 +60,7 @@ void render_map(const State *S){
             else if (v == 5) printf("🟧");
             else if (v == 6) printf("🟫");
             else if (v == 7) printf("🟪");
+            else if (v == 8) printf("🔷");
             else if (v == 9) printf("🔳");
             else printf("  ");
         }
